@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <!-- Logo -->
+      <div class="logo" aria-hidden="true">
+        <svg
+          width="87"
+          height="54"
+          viewBox="0 0 87 54"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 54V0H12.3L23.4 36.9L34.5 0H46.8V54H36.6V19.5L26.4 54H20.4L10.2 19.5V54H0ZM59.4 54V35.7H79.2V54H59.4ZM59.4 27.6V9.3H79.2V27.6H59.4Z"
+            fill="#00474B"
+          />
+        </svg>
+      </div>
+
+      <!-- Calculator Container -->
+      <div class="calculator" role="application" aria-label="Tip Calculator">
+        <div class="calculator__inputs">
+          <!-- Bill Input -->
+          <div class="input-group">
+            <label for="bill" class="input-group__label">Bill</label>
+            <div class="input-group__wrapper">
+              <span class="input-group__icon" aria-hidden="true">$</span>
+              <input
+                type="number"
+                id="bill"
+                class="input-group__input"
+                placeholder="0"
+                min="0"
+                step="0.01"
+                aria-describedby="bill-error"
+              />
+            </div>
+            <span
+              id="bill-error"
+              class="input-group__error"
+              role="alert"
+            ></span>
+          </div>
+
+          <!-- Tip Selection -->
+          <div class="tip-selection">
+            <p class="tip-selection__label">Select Tip %</p>
+            <div
+              class="tip-selection__grid"
+              role="radiogroup"
+              aria-label="Tip percentage"
+            >
+              <button
+                type="button"
+                class="tip-btn"
+                role="radio"
+                aria-checked="false"
+                data-tip="5"
+              >
+                5%
+              </button>
+              <button
+                type="button"
+                class="tip-btn"
+                role="radio"
+                aria-checked="false"
+                data-tip="10"
+              >
+                10%
+              </button>
+              <button
+                type="button"
+                class="tip-btn"
+                role="radio"
+                aria-checked="false"
+                data-tip="15"
+              >
+                15%
+              </button>
+              <button
+                type="button"
+                class="tip-btn"
+                role="radio"
+                aria-checked="false"
+                data-tip="25"
+              >
+                25%
+              </button>
+              <button
+                type="button"
+                class="tip-btn"
+                role="radio"
+                aria-checked="false"
+                data-tip="50"
+              >
+                50%
+              </button>
+              <div class="tip-selection__custom">
+                <input
+                  type="number"
+                  id="custom-tip"
+                  class="tip-selection__custom-input"
+                  placeholder="Custom"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                  aria-label="Custom tip percentage"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- People Input -->
+          <div class="input-group">
+            <div class="input-group__header">
+              <label for="people" class="input-group__label"
+                >Number of People</label
+              >
+              <span
+                id="people-error"
+                class="input-group__error"
+                role="alert"
+              ></span>
+            </div>
+            <div class="input-group__wrapper">
+              <span class="input-group__icon" aria-hidden="true">👤</span>
+              <input
+                type="number"
+                id="people"
+                class="input-group__input"
+                placeholder="0"
+                min="0"
+                aria-describedby="people-error"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Panel -->
+        <div class="calculator__results">
+          <div class="result-row">
+            <div>
+              <p class="result-row__label">Tip Amount</p>
+              <p class="result-row__sub">/ person</p>
+            </div>
+            <p id="tip-amount" class="result-row__value" aria-live="polite">
+              $0.00
+            </p>
+          </div>
+          <div class="result-row">
+            <div>
+              <p class="result-row__label">Total</p>
+              <p class="result-row__sub">/ person</p>
+            </div>
+            <p id="total-amount" class="result-row__value" aria-live="polite">
+              $0.00
+            </p>
+          </div>
+          <button id="reset-btn" class="reset-btn" disabled>Reset</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/Kelvyn94" target="_blank">Kelvyn94</a>.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
