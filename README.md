@@ -22,7 +22,7 @@ url("./design/desktop-design-completed.jpg")
 
 ### 🔗 Links
 
-- **Live Site URL:** [GitHub Pages](https://yourusername.github.io/tip-calculator-app)
+- **Live Site URL:** [GitHub Pages]((https://kelvyn94.github.io/Tip-Calculator-App/))
 - **Solution Repository:** [GitHub]((https://github.com/Kelvyn94/Tip-Calculator-App))
 - **Frontend Mentor Solution:** [View Solution](https://www.frontendmentor.io/solutions/...)
 
